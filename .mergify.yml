@@ -1,2 +1,7 @@
 queue_rules:
-  - name: "54"
+  - name: 54
+    queue_conditions:
+      - base=main
+    merge_conditions:
+      - check-success=mergify
+    merge_method: merge
