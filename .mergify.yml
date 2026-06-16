@@ -3,7 +3,7 @@ queue_rules:
     queue_conditions:
       - base=main
     merge_conditions:
-      - check-success=flaky-test
+      - check-success=test_authz_bypass
     merge_method: merge
     checks_timeout: 300
 
