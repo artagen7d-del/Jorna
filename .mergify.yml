@@ -2,8 +2,10 @@ queue_rules:
   - name: default
     queue_conditions:
       - base=main
-    merge_conditions: []
+    merge_conditions:
+      - check-success=flaky-test
     merge_method: merge
+    checks_timeout: 300
 
 pull_request_rules:
   - name: Queue PR on default
